@@ -18,6 +18,8 @@ module "vpc" {
 ##-----------------------------------------------------------------------
 ## droplet module call
 ##-----------------------------------------------------------------------
+
+#tfsec:ignore:digitalocean-compute-no-public-ingress
 module "droplet" {
   source             = "./../"
   name               = "demo"

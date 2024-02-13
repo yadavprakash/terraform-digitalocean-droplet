@@ -17,6 +17,7 @@ resource "digitalocean_ssh_key" "main" {
 ##----------------------------------------------------------------------------------------------------------------
 #Description : Provides a DigitalOcean Droplet resource. This can be used to create, modify, and delete Droplets.
 ##----------------------------------------------------------------------------------------------------------------
+
 resource "digitalocean_droplet" "test" {
   count             = var.enabled == true ? var.droplet_count : 0
   image             = var.image_name
