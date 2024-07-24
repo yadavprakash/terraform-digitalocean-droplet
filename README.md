@@ -17,7 +17,7 @@ This Terraform module creates structured droplet for digitalocean resources with
 
 ```hcl
 module "droplet" {
-  source             = "git::https://github.com/opsstation/terraform-digitalocean-droplet.git?ref=v1.0.0"
+  source             = "git::https://github.com/yadavprakash/terraform-digitalocean-droplet.git?ref=v1.0.0"
   name               = "demo"
   environment        = "test"
   region             = "blr1"
@@ -52,21 +52,21 @@ Please ensure you specify the correct 'source' path for the module.
 - `environment`: The environment (e.g., "test", "production").
 - `label_order`: Label order, e.g. `name`,`application`.
 - `enabled`: Flag to control the droplet creation.
-- `managedby`:  ManagedBy, eg 'opsstation'.
+- `managedby`:  ManagedBy, eg 'yadavprakash'.
 - `floating_ip` : Boolean to control whether floating IPs should be created.
 
 ## Module Outputs
 - This module currently does not provide any outputs.
 
 # Examples
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/opsstation/terraform-digitalocean-droplet/tree/master/_example)' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[example](https://github.com/yadavprakash/terraform-digitalocean-droplet/tree/master/_example)' directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-digitalocean-droplet/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-digitalocean-droplet/blob/master/LICENSE) file for details.
 
 
 
@@ -88,7 +88,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-digitalocean-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-digitalocean-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -124,7 +124,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_key_name"></a> [key\_name](#input\_key\_name) | name of key. | `string` | `""` | no |
 | <a name="input_key_path"></a> [key\_path](#input\_key\_path) | Name  (ssh-rsa AAAAB3NzaC1yc2AADAQABAzV0LX3X8BsXdMsQ`).` | `string` | `""` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation' | `string` | `"opsstation"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash' | `string` | `"yadavprakash"` | no |
 | <a name="input_monitoring"></a> [monitoring](#input\_monitoring) | Boolean controlling whether monitoring agent is installed. Defaults to false. | `bool` | `false` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_outbound_rule"></a> [outbound\_rule](#input\_outbound\_rule) | List of objects that represent the configuration of each outbound rule. | <pre>list(object({<br>    protocol              = string<br>    port_range            = string<br>    destination_addresses = list(string)<br>  }))</pre> | <pre>[<br>  {<br>    "destination_addresses": [<br>      "0.0.0.0/0",<br>      "::/0"<br>    ],<br>    "port_range": "1-65535",<br>    "protocol": "tcp"<br>  },<br>  {<br>    "destination_addresses": [<br>      "0.0.0.0/0",<br>      "::/0"<br>    ],<br>    "port_range": "1-65535",<br>    "protocol": "udp"<br>  }<br>]</pre> | no |

@@ -6,7 +6,7 @@ provider "digitalocean" {
 ##-----------------------------------------------------------------------
 
 module "vpc" {
-  source      = "git::https://github.com/opsstation/terraform-digitalocean-vpc.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-digitalocean-vpc.git?ref=v1.0.0"
   name        = "networking"
   environment = "test"
   label_order = ["name", "environment"]

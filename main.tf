@@ -1,5 +1,5 @@
 module "labels" {
-  source      = "git::https://github.com/opsstation/terraform-digitalocean-labels.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-digitalocean-labels.git?ref=v1.0.0"
   name        = var.name
   managedby   = var.managedby
   environment = var.environment
